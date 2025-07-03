@@ -1,0 +1,189 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: auto;
+}
+.heading-text{
+  text-align: center;
+  padding: 20px 0 20px 0;
+  background-color: aqua;
+  color: #000;
+}
+
+/* booklist page css */
+.bookList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* booksDetails page css */
+
+.book-card{
+ width: 350px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+  overflow: hidden;
+  padding: 0; /* Remove if you want edge-to-edge */
+
+}
+.book-card:hover{
+transform: scale(1.1);
+}
+
+
+.images-cover{
+  width: 100%;
+  padding: 20px;
+}
+
+.card-details{
+  flex: 1 1 auto; /* Take up available space */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+.card-title{
+  font-size: 20px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.card-author{
+  font-size: 18px;
+    color: blue;
+}
+.card-category{
+  font-size: 15px;
+  color: blueviolet;
+}
+.card-rating{
+  font-size: 16px;
+  color: rgb(233, 17, 10);
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+
+.card-parag{
+  font-size: 15px;
+  text-align: justify;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-outer{
+margin-top: auto;
+  display: flex;
+  justify-content:center; /* or center */
+}
+
+.button-add{
+ /* width: 100px;
+  height: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: brown;
+  color: white;
+  border: none;
+  margin-top: 0;
+  padding: 7px;
+    border-radius: 6px;
+}
+
+
+.button-add:hover{
+background-color: #000;
+color: white;
+}
+
+/* search box css */
+
+.search-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.search-inner input{
+  width: 400px;
+  padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+ 
+  }
+.search-btn{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;}
+
+
+
+    /* media query for mobile */
+    @media (max-width: 600px) {
+  .container {
+    width: 100vw;
+    padding: 0 5px;
+    min-width: unset;
+  }
+  .heading-text {
+    font-size: 1.2rem;
+    padding: 15px 0;
+  }
+  .search-box {
+    margin: 10px 0;
+  }
+  .search-inner input {
+    width: 70vw;
+        padding: 7px;
+    min-width: 0;
+    font-size: 1rem;
+  }
+  .search-btn {
+    width: 80px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .bookList {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .book-card {
+    width: 98vw;
+    min-width: 0;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  .images-cover {
+    padding: 10px;
+  }
+  .card-details {
+    padding: 8px;
+  }
+  .button-add {
+    width: 90vw;
+    max-width: 200px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
