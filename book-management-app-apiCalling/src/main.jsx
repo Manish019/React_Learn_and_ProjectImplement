@@ -2,17 +2,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import About from "./components/About.jsx";
-// import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
-// import BookList from "./components/BookList.jsx";
-// import BookDetails from "./components/BookDetails.jsx";
 import Home from "./components/Home.jsx";
 import BookInfo from "./components/BookInfo.jsx";
 import AddBook from "./components/AddBook.jsx";
 import BookAllCategory from "./components/BookAllCategory.jsx";
 import bookStore from "./utils/bookStore.js";
 import {Provider} from 'react-redux'
+// import './index.css'
 // import Search from "./components/Search.jsx";
 
 // createing Browser router

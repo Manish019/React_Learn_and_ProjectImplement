@@ -3,8 +3,6 @@ import { useDispatch } from "react-redux";
 import { addBook } from "../utils/bookSlice";
 import './addbook.css'
 
-
-
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");

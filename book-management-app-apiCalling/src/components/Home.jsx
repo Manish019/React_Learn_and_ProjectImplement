@@ -1,6 +1,6 @@
 // import React from 'react'
 // import Search from './Search'
-import BookAllCategory from './BookAllCategory'
+// import BookAllCategory from './BookAllCategory'
 import BookList from './BookList'
 
 
@@ -10,8 +10,12 @@ const Home = () => {
 <>
 {/* <Search /> */}
 {/* <BookList /> */}
-<h1>Welcome to the Online Library 📚</h1>
-<BookAllCategory />
+<div className=''>
+
+</div>
+<h1 className='text-2xl'>Welcome to the Online Library 📚</h1>
+{/* <BookAllCategory /> */}
+<BookList />;
 </>
 
 

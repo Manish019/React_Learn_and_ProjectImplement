@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { BookContext } from "../pages/BookContext";
+// import { BookContext } from "../pages/BookContext";
 import { useSelector } from 'react-redux';
-import BookDetails from './BookDetails';
+// import BookDetails from './BookDetails';
 
 const BookInfo = () => {
   const params = useParams();
