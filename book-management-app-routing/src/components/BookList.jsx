@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { BookContext } from "../context/BookContext";
 import BookDetails from "./BookDetails";
-import './style.css';
+import { Link } from "react-router-dom";
 
-function BookList(props) {
-  const books = props.booksData;
+const BookList = () => {
+  const { books } = useContext(BookContext);
 
   if (!Array.isArray(books) || books.length === 0) {
     return <p>No books available.</p>;
   }
 
-  // Helper to truncate description
   const truncate = (str, n) => {
     return str.split(" ").slice(0, n).join(" ") + (str.split(" ").length > n ? "..." : "");
   };
@@ -17,12 +17,12 @@ function BookList(props) {
   return (
     <div className="bookList">
       {books.map((data) => (
-        <Link to={`/book-details/${data.id}`} key={data.id} className="link-list">
+        <Link to={`/book-details/${data.id}`} key={data.id}>
           <BookDetails bookInfo={{ ...data, description: truncate(data.description, 20) }} />
         </Link>
       ))}
     </div>
   );
-}
+};
 
 export default BookList;

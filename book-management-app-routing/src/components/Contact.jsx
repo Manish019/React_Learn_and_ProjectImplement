@@ -1,8 +1,15 @@
 import React from 'react'
+// import BookList from "./BookList";
+
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <h2>Contact Us</h2>
+    
+     </>
+    
+     
   )
 }
 

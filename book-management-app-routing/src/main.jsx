@@ -10,6 +10,7 @@ import Error from "./components/Error.jsx";
 import BookList from "./components/BookList.jsx";
 import Home from "./components/Home.jsx";
 import BookInfo from "./components/BookInfo.jsx";
+import BookManager from "./components/BookManager.jsx";
 // import Search from "./components/Search.jsx";
 
 // createing Browser router
@@ -44,6 +45,12 @@ const appRouter = createBrowserRouter([
         path: "/book-details/:id",
         element: <BookInfo />,
       },
+    
+     
+      { path: "/addBook", 
+        element: <BookManager />
+       }, // <-- Add this line
+      // ...other routes...
     ],
     errorElement: <Error />,
   },

@@ -10,7 +10,10 @@ const Header = () => {
    {/* <a href=''><li>Home</li></a>  */}
    <Link to='/' className='link-nav'><li>Home</li></Link>
    <Link to='/about' className='link-nav'><li>About Us</li></Link> 
-   <Link to='/contact' className='link-nav'><li>Contact Us</li></Link> 
+      <Link to='/addBook' className='link-nav'><li>Add Book</li></Link> 
+   <Link to='/bookdetailsaddBook' className='link-nav'><li>Book Details</li></Link> 
+
+   <Link to='/contact' className='link-nav'><li>Conatct Us</li></Link> 
    </ul>
    {/* <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <span className="bar"></span>
