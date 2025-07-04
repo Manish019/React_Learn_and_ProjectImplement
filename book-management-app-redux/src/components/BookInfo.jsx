@@ -1,17 +1,20 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookContext } from "../pages/BookContext";
+import { useSelector } from 'react-redux';
+import BookDetails from './BookDetails';
 
 const BookInfo = () => {
   const params = useParams();
-  const { books } = useContext(BookContext);
-
+  // const { books } = useContext(BookContext);
+const books = useSelector((state) => state.books.books);
   // Find the book by ID from the context
   const book = books.find((book) => String(book.id) === params.id);
 
   if (!book) return <p>Book not found.</p>;
 
   return (
+    <>
     <div className='container'>
       <div className="book-info">
         <img
@@ -30,6 +33,11 @@ const BookInfo = () => {
         </div>
       </div>
     </div>
+  
+     {/* <BookDetails bookInfo={book} /> */}
+    
+    
+    </>
   );
 };
 

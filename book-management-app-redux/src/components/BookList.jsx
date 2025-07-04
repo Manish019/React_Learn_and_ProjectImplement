@@ -1,10 +1,14 @@
-import React, { useContext, useState, useEffect } from "react";
-import { BookContext } from "../pages/BookContext.jsx";
+import React, {useState, useEffect } from "react";
+// import { BookContext } from "../pages/BookContext.jsx";
 import BookDetails from "./BookDetails";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const BookList = () => {
-  const { books } = useContext(BookContext);
+  // const { books } = useContext(BookContext);
+const books = useSelector((state) => state.books.books);
+
+
   const [searchText, setSearchText] = useState("");
   const [filteredBooks, setFilteredBooks] = useState(books || []);
 

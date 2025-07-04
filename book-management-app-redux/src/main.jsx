@@ -7,13 +7,12 @@ import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
 // import BookList from "./components/BookList.jsx";
 // import BookDetails from "./components/BookDetails.jsx";
-import BookList from "./components/BookList.jsx";
 import Home from "./components/Home.jsx";
 import BookInfo from "./components/BookInfo.jsx";
-import BookManager from "./components/BookManager.jsx";
 import AddBook from "./components/AddBook.jsx";
-import { BookProvider } from "./pages/BookContext.jsx";
 import BookAllCategory from "./components/BookAllCategory.jsx";
+import bookStore from "./utils/bookStore.js";
+import {Provider} from 'react-redux'
 // import Search from "./components/Search.jsx";
 
 // createing Browser router
@@ -66,9 +65,11 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
 
-     <BookProvider>
+  <StrictMode>
+    <Provider store={bookStore}>
       <RouterProvider router={appRouter} />
-    </BookProvider>
+    </Provider>
+  </StrictMode>
     {/* <RouterProvider router={appRouter} /> */}
   </StrictMode>
 );
